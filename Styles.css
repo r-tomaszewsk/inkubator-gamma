@@ -61,6 +61,9 @@ button:hover {
 .secondScreen {
     position: absolute;
     display: none;
+    width: 20%;
+    height: 40px;
+    background-color: rgba(252,252,252, 0.5);
 }
 
 .firstScreen{
