@@ -1,20 +1,22 @@
-body{
+body {
     background-image: url("img/background.jpg");
+    font-family: Arial, sans-serif
 }
 
-input{
+input {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
     height: 7%;
+    text-align: center;
     font-size: 48px;
-    background-color: rgba(252,252,252, 0.5);
-    color:rgb(218, 215, 230);
+    background-color: rgba(252, 252, 252, 0.5);
+    color: rgb(218, 215, 230);
 }
 
-header{
+header {
     position: absolute;
     left: 50%;
     top: 40%;
@@ -26,7 +28,7 @@ header{
     color: white;
 }
 
- button {
+button {
     position: absolute;
     border: none;
     border-radius: 10px;
@@ -38,7 +40,7 @@ header{
     transition: 0.5s;
 }
 
-#model{
+#model {
     left: 60%;
     top: 60%;
 }
@@ -55,7 +57,7 @@ button:hover {
 
 
 
-#back{
+#back {
     left: 60%;
     top: 60%;
 }
@@ -63,7 +65,7 @@ button:hover {
 div {
     width: 20%;
     height: 40px;
-    background-color: rgba(252,252,252, 0.5);
+    background-color: rgba(252, 252, 252, 0.5);
 }
 
 
@@ -88,26 +90,49 @@ div {
 }
 
 #matrix {
-    position: absolute;
     top: 60%;
     left: 25%;
 }
 
-.firstScreen #myModel, .firstScreen #model, .firstScreen header, .firstScreen input{
+.firstScreen #myModel,
+.firstScreen #model,
+.firstScreen header,
+.firstScreen input {
     position: absolute;
     display: block;
-}  
+}
 
-.firstScreen #size, .firstScreen #back, .firstScreen #matrix, .firstScreen #year, .firstScreen #region, .firstScreen #series {
+.firstScreen #size,
+.firstScreen #back,
+.firstScreen #matrix,
+.firstScreen #year,
+.firstScreen #region,
+.firstScreen #series {
     position: absolute;
     display: none;
 }
 
-.secondScreen #myModel, .secondScreen #model, .secondScreen header, .secondScreen input{
+.secondScreen #myModel,
+.secondScreen #model,
+.secondScreen header,
+.secondScreen input {
     position: absolute;
     display: none;
-}  
-.secondScreen #size, .secondScreen #back.secondScreen #matrix, .secondScreen #year, .secondScreen #region, .secondScreen #series {
+}
+
+.secondScreen #size,
+.secondScreen #back.secondScreen #matrix,
+.secondScreen #year,
+.secondScreen #region,
+.secondScreen #series,
+.secondScreen #matrix {
     position: absolute;
     display: block;
+}
+
+.output {
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
 }
