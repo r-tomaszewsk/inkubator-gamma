@@ -88,11 +88,12 @@ div {
 }
 
 #matrix {
-    top: 25%;
-    left: 60%;
+    position: absolute;
+    top: 60%;
+    left: 25%;
 }
 
-.firstScreen #myModel, .firstScreen #model .firstScreen header, .firstScreen input{
+.firstScreen #myModel, .firstScreen #model, .firstScreen header, .firstScreen input{
     position: absolute;
     display: block;
 }  
@@ -102,7 +103,7 @@ div {
     display: none;
 }
 
-.secondScreen #myModel, .secondScreen #model .secondScreen header, .secondScreen input{
+.secondScreen #myModel, .secondScreen #model, .secondScreen header, .secondScreen input{
     position: absolute;
     display: none;
 }  
