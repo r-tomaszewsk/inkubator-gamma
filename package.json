@@ -1,0 +1,23 @@
+{
+  "name": "inkubator-gamma",
+  "version": "1.0.0",
+  "description": "TV Model Code is a tool to checking Samsung TV models",
+  "main": "Script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-tomaszewsk/inkubator-gamma.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r-tomaszewsk/inkubator-gamma/issues"
+  },
+  "homepage": "https://github.com/r-tomaszewsk/inkubator-gamma#readme",
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
