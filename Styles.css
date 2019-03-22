@@ -40,15 +40,48 @@ header{
 
 button:first-of-type {
     left: 60%;
-    top: 70%;
+    top: 60%;
 }
 
 button:nth-of-type(2) {
-    left: 42%;
-    top: 70%;
+    left: 25%;
+    top: 60%;
 }
 
 button:hover {
     background-color: black;
     color: white;
+}
+
+.secondScreen {
+    display: none;
+    position: absolute;
+    width: 20%;
+    height: 60px;
+    background-color: rgb(252,252,252, 0.5)
+}
+
+#size {
+    left: 0;
+    top: 0;
+}
+
+#series {
+    right: 0;
+    bottom: 0;
+}
+
+#region {
+    left: 0;
+    bottom: 0;
+}
+
+#year {
+    top: 50%;
+    left: 10%;
+}
+
+#matrix {
+    top: 50%;
+    left: 60%;
 }
