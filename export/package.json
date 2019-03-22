@@ -4,8 +4,7 @@
   "description": "TV Model Code is a tool to checking Samsung TV models",
   "main": "Script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "copy": "gulp copy"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
