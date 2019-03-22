@@ -38,12 +38,12 @@ header{
     transition: 0.5s;
 }
 
-button:first-of-type {
+#model{
     left: 60%;
     top: 60%;
 }
 
-button:nth-of-type(2) {
+#myModel{
     left: 25%;
     top: 60%;
 }
@@ -53,12 +53,19 @@ button:hover {
     color: white;
 }
 
+#return{
+    left: 60%;
+    top: 60%;
+}
+
 .secondScreen {
-    display: none;
     position: absolute;
-    width: 20%;
-    height: 60px;
-    background-color: rgb(252,252,252, 0.5)
+    display: none;
+}
+
+.firstScreen{
+    position:absolute;
+    display: block; 
 }
 
 #size {
