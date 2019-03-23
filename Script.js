@@ -1,20 +1,18 @@
 const model = document.getElementById("model");
 const back = document.getElementById("back");
-const body = document.querySelector("body")
-const modelCode = document.getElementById("input");
-const yearOutput = document.getElementById("year");
-const regionOutput = document.getElementById("region");
-const matrixTypeOutput = document.getElementById("matrix");
-const sizeOutput = document.getElementById("size");
-const seriesOutput = document.getElementById("series");
+const body = document.body;
+const modelCode = document.getElementById("myModel");
 const input = document.querySelector("input");
 
-const outputs = [document.getElementById("year")];
-
+const displayOutputs = {
+    yearOutput: document.getElementById("year"),
+    regionOutput: document.getElementById("region"),
+    matrixTypeOutput: document.getElementById("matrix"),
+    sizeOutput: document.getElementById("size"),
+    seriesOutput: document.getElementById("series"),
+}
 
 model.addEventListener("click", function () {
-
-
     const textFieldValue = input.value;
     const tvDeviceObject = app.modelCode.parse(textFieldValue);
     if (!textFieldValue) {
@@ -29,14 +27,12 @@ model.addEventListener("click", function () {
         body.classList.remove("firstScreen");
         body.classList.add("secondScreen")
 
-        yearOutput.innerText = tvDeviceObject.year.name;
-        regionOutput.innerText = tvDeviceObject.region.name;
-        matrixTypeOutput.innerText = tvDeviceObject.matrixType.name;
-        sizeOutput.innerText = `${tvDeviceObject.screenSize.name}"`;
-        seriesOutput.innerText = tvDeviceObject.series.name;
+        displayOutputs.yearOutput.innerText = tvDeviceObject.year.name;
+        displayOutputs.regionOutput.innerText = tvDeviceObject.region.name;
+        displayOutputs.matrixTypeOutput.innerText = tvDeviceObject.matrixType.name;
+        displayOutputs.sizeOutput.innerText = `${tvDeviceObject.screenSize.name}"`;
+        displayOutputs.seriesOutput.innerText = tvDeviceObject.series.name;
     }
-
-
 });
 back.addEventListener("click", function () {
     body.classList.remove("secondScreen");
