@@ -136,3 +136,20 @@ div {
     font-size: 30px;
     font-weight: bold;
 }
+
+#popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 15%;
+    line-height: 500%;
+    background-color: rgba(335, 318, 275, 0.9);
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    display: none;
+
+}
