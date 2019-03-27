@@ -140,7 +140,39 @@ window.app.nav = function(tizen) {
             bindDefaultEvents();
             MAX_TAB_INDEX = determinMaxTabIndex();
             goToNextElem();
+        },
+        getActiveElement: function() {
+            const activeClassElement = document.querySelector(`.${ACTIVE_CSS_CLASS}`);
+            const body = document.body;
+            console.log(activeClassElement);
+            if (activeClassElement.id === "model") {
+                const textFieldValue = input.value;
+                const tvDeviceObject = app.modelCode.parse(textFieldValue);
+                if (!textFieldValue) {
+                    (function () {
+                        const popup = document.getElementById("popup");
+                        popup.style.display = "block";
+                        setTimeout(function () {
+                            popup.style.display = "none";
+                        }, 2000);
+                    })();
+                } else {
+                    body.classList.remove("firstScreen");
+                    body.classList.add("secondScreen");
+                    activeClassElement.classList.remove("active");
+            
+                    displayOutputs.yearOutput.innerText = tvDeviceObject.year.name;
+                    displayOutputs.regionOutput.innerText = tvDeviceObject.region.name;
+                    displayOutputs.matrixTypeOutput.innerText = tvDeviceObject.matrixType.name;
+                    displayOutputs.sizeOutput.innerText = `${tvDeviceObject.screenSize.name}"`;
+                    displayOutputs.seriesOutput.innerText = tvDeviceObject.series.name;
+                }
+            } else if (activeClassElement.id === "back") {
+                body.classList.remove("secondScreen");
+                body.classList.add("firstScreen");
+            }
         }
+        
     };
 
 }(window.tizen);
