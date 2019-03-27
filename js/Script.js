@@ -43,6 +43,17 @@ back.addEventListener("click", function () {
     body.classList.add("firstScreen");
 })
 
+document.body.addEventListener("keydown", function(e) {  
+    switch(e.keyCode) {
+        case 13:
+        app.nav.getActiveElement();
+        break;
+    }
+})
+
+app.nav.init();
+
+
 //UE55NU7021K
 //UE40KU6100KXXU
 //UE55NU7021KXXU
