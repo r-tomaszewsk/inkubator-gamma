@@ -12,6 +12,10 @@ const displayOutputs = {
     seriesOutput: document.getElementById("series"),
 }
 
+myModel.addEventListener("click", function() {
+    const tvModel = app.modelCode.parse(webapis.productinfo.getRealModel());
+})
+
 model.addEventListener("click", function () {
     const textFieldValue = input.value;
     const tvDeviceObject = app.modelCode.parse(textFieldValue);
