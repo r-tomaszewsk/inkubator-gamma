@@ -20,6 +20,10 @@ document.body.addEventListener("keydown", function(e) {
     }
 })
 
+if (input.className === "active") {
+    
+}
+
 app.nav.init();
 
 

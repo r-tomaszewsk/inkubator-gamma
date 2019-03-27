@@ -167,6 +167,7 @@ window.app.nav = function(tizen) {
                     displayOutputs.seriesOutput.innerText = tvDeviceObject.series.name;
                 }
             }
+            
             if (activeClassElement.id === "model") {
                 displayModel(textFieldValue);
             } else if (activeClassElement.id === "myModel") {
