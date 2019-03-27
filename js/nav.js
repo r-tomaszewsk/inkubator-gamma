@@ -144,11 +144,11 @@ window.app.nav = function(tizen) {
         getActiveElement: function() {
             const activeClassElement = document.querySelector(`.${ACTIVE_CSS_CLASS}`);
             const body = document.body;
-            console.log(activeClassElement);
-            if (activeClassElement.id === "model") {
-                const textFieldValue = input.value;
-                const tvDeviceObject = app.modelCode.parse(textFieldValue);
-                if (!textFieldValue) {
+            const textFieldValue = input.value;
+
+            function displayModel(modelCode) {
+                const tvDeviceObject = app.modelCode.parse(modelCode);
+                if (!modelCode) {
                     (function () {
                         const popup = document.getElementById("popup");
                         popup.style.display = "block";
@@ -167,6 +167,12 @@ window.app.nav = function(tizen) {
                     displayOutputs.sizeOutput.innerText = `${tvDeviceObject.screenSize.name}"`;
                     displayOutputs.seriesOutput.innerText = tvDeviceObject.series.name;
                 }
+            }
+            
+            if (activeClassElement.id === "model") {
+                displayModel(textFieldValue);
+            } else if (activeClassElement.id === "myModel") {
+                displayModel(webapis.productInfo.getRealModel());
             } else if (activeClassElement.id === "back") {
                 body.classList.remove("secondScreen");
                 body.classList.add("firstScreen");
