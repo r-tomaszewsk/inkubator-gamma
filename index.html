@@ -14,22 +14,25 @@
 
 <body class="firstScreen">
     <header>TV Model Code</header>
-    <input type="text">
-    <button id="model">Go</button>
-    <button id="myModel">Show my model</button>
+    <input tabindex="0" type="text">
+    <button tabindex="2" id="model">Go</button>
+    <button tabindex="1" id="myModel">Show my model</button>
     <div id="size" class="output"></div>
     <div id="year" class="output"></div>
     <div id="region" class="output"></div>
     <div id="series" class="output"></div>
     <div id="matrix" class="output"></div>
 
-    <button id="back"><i class="fas fa-undo-alt"></i></button>
+    <button tabindex="3" id="back"><i class="fas fa-undo-alt"></i></button>
 
     <div id="popup">Please, provide device's model code</div>
 
     <script src="js/Script.js"></script>
     <script src="js/ModelCodeData.js"></script>
     <script src="js/ModelCode.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+
 
 </body>
 

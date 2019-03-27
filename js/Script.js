@@ -39,6 +39,8 @@ back.addEventListener("click", function () {
     body.classList.add("firstScreen");
 })
 
+app.nav.init();
+
 //UE55NU7021K
 //UE40KU6100KXXU
 //UE55NU7021KXXU
