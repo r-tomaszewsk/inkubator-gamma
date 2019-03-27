@@ -12,37 +12,6 @@ const displayOutputs = {
     seriesOutput: document.getElementById("series"),
 }
 
-myModel.addEventListener("click", function() {
-    const tvModel = app.modelCode.parse(webapis.productinfo.getRealModel());
-})
-
-model.addEventListener("click", function () {
-    const textFieldValue = input.value;
-    const tvDeviceObject = app.modelCode.parse(textFieldValue);
-    if (!textFieldValue) {
-        (function () {
-            const popup = document.getElementById("popup");
-            popup.style.display = "block";
-            setTimeout(function () {
-                popup.style.display = "none";
-            }, 2000);
-        })();
-    } else {
-        body.classList.remove("firstScreen");
-        body.classList.add("secondScreen")
-
-        displayOutputs.yearOutput.innerText = tvDeviceObject.year.name;
-        displayOutputs.regionOutput.innerText = tvDeviceObject.region.name;
-        displayOutputs.matrixTypeOutput.innerText = tvDeviceObject.matrixType.name;
-        displayOutputs.sizeOutput.innerText = `${tvDeviceObject.screenSize.name}"`;
-        displayOutputs.seriesOutput.innerText = tvDeviceObject.series.name;
-    }
-});
-back.addEventListener("click", function () {
-    body.classList.remove("secondScreen");
-    body.classList.add("firstScreen");
-})
-
 document.body.addEventListener("keydown", function(e) {  
     switch(e.keyCode) {
         case 13:
