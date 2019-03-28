@@ -171,7 +171,7 @@ window.app.nav = function(tizen) {
             if (activeClassElement.id === "model") {
                 displayModel(textFieldValue);
             } else if (activeClassElement.id === "myModel") {
-                displayModel(webapis.productInfo.getRealModel());
+                displayModel(webapis.productinfo.getRealModel()+'A');
             } else if (activeClassElement.id === "back") {
                 body.classList.remove("secondScreen");
                 body.classList.add("firstScreen");
