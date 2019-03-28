@@ -145,6 +145,7 @@ window.app.nav = function(tizen) {
             const activeClassElement = document.querySelector(`.${ACTIVE_CSS_CLASS}`);
             const body = document.body;
             const textFieldValue = input.value;
+            console.log(activeClassElement);
             function displayModel(modelCode) {
                 const tvDeviceObject = app.modelCode.parse(modelCode);
                 if (!modelCode) {
@@ -159,6 +160,8 @@ window.app.nav = function(tizen) {
                     body.classList.remove("firstScreen");
                     body.classList.add("secondScreen");
                     activeClassElement.classList.remove("active");
+                    back.classList.add("active");
+
             
                     displayOutputs.yearOutput.innerText = tvDeviceObject.year.name;
                     displayOutputs.regionOutput.innerText = tvDeviceObject.region.name;
@@ -175,6 +178,9 @@ window.app.nav = function(tizen) {
             } else if (activeClassElement.id === "back") {
                 body.classList.remove("secondScreen");
                 body.classList.add("firstScreen");
+                activeClassElement.classList.remove("active");
+                console.log(input);
+                input.classList.add("active");
             }
         }
         
