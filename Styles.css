@@ -162,10 +162,10 @@ div {
 object {
     display: none;
     position: absolute;
-    left: 50%;
-    top: 1%;
+    left: 680px;
+    top: 2px;
     transform: translate(-50%);
-    width: 60%;
-    height: 55%;
+    width: 600px;
+    height: 350px;
     z-index: 10;
 }
