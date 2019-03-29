@@ -179,8 +179,10 @@ window.app.nav = function(tizen) {
                 body.classList.remove("secondScreen");
                 body.classList.add("firstScreen");
                 activeClassElement.classList.remove("active");
-                console.log(input);
                 input.classList.add("active");
+            } else if (activeClassElement.id === "textField") {
+                console.log("input focused");
+                input.focus();
             }
         }
         

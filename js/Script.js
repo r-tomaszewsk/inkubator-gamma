@@ -17,12 +17,14 @@ document.body.addEventListener("keydown", function(e) {
         case 13:
         app.nav.getActiveElement();
         break;
+        case 65376:
+        input.blur();
+        break;
+        case 65385:
+        input.blur();
+        break;
     }
 })
-
-if (input.className === "active") {
-    
-}
 
 app.nav.init();
 
