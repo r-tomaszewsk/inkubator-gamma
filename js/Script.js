@@ -3,6 +3,7 @@ const back = document.getElementById("back");
 const body = document.body;
 const modelCode = document.getElementById("myModel");
 const input = document.querySelector("input");
+const object = document.querySelector("object");
 
 const displayOutputs = {
     yearOutput: document.getElementById("year"),

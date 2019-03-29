@@ -168,6 +168,7 @@ window.app.nav = function(tizen) {
                     displayOutputs.matrixTypeOutput.innerText = tvDeviceObject.matrixType.name;
                     displayOutputs.sizeOutput.innerText = `${tvDeviceObject.screenSize.name}"`;
                     displayOutputs.seriesOutput.innerText = tvDeviceObject.series.name;
+                    object.style.display = "block";
                 }
             }
             
@@ -178,10 +179,10 @@ window.app.nav = function(tizen) {
             } else if (activeClassElement.id === "back") {
                 body.classList.remove("secondScreen");
                 body.classList.add("firstScreen");
+                object.style.display = "none";
                 activeClassElement.classList.remove("active");
                 input.classList.add("active");
             } else if (activeClassElement.id === "textField") {
-                console.log("input focused");
                 input.focus();
             }
         }
