@@ -6,6 +6,7 @@ function Player () {
         // 
     });
 
+
     function init (url) {
 
         var listener = {
@@ -38,7 +39,7 @@ function Player () {
             },
 
           };
-                  
+
         webapis.avplay.open(url);
         webapis.avplay.setListener(listener);
         webapis.avplay.setDisplayRect('680','2','600','350');
@@ -66,6 +67,7 @@ function Player () {
         init: init,
         play: play,
         stop: stop,
-        getStatus: getStatus
+        getStatus: getStatus,
+        getURL: getURL
     };
 }

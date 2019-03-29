@@ -169,6 +169,15 @@ window.app.nav = function(tizen) {
                     displayOutputs.sizeOutput.innerText = `${tvDeviceObject.screenSize.name}"`;
                     displayOutputs.seriesOutput.innerText = tvDeviceObject.series.name;
                     object.style.display = "block";
+                    tizen.filesystem.resolve('wgt-package/video/QE75Q6FNA.mp4', function(file)
+                    {
+                       
+                      Player.init(file.toURI());
+                      Player.play();
+              
+                    }); 
+                    
+
                 }
             }
             
