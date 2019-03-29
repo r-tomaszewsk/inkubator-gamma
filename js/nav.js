@@ -171,7 +171,7 @@ window.app.nav = function(tizen) {
                     object.style.display = "block";
                     
                     console.log('Player yay!');
-
+                    
                     tizen.filesystem.resolve('wgt-package', function(directory)
                     {
                         console.log(directory.toURI() + '/video/QE75Q6FNA.mp4');

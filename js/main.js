@@ -40,6 +40,7 @@ function Player () {
         webapis.avplay.open(url);
         webapis.avplay.setListener(listener);
         webapis.avplay.setDisplayRect('680','2','600','350');
+        webapis.avplay.setLooping(true);
      
     }
 
