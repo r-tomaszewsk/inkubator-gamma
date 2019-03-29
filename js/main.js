@@ -1,11 +1,8 @@
 function Player () {
     //
-
-
     document.addEventListener('visibilitychange', function () {
         // 
     });
-
 
     function init (url) {
 
@@ -67,7 +64,6 @@ function Player () {
         init: init,
         play: play,
         stop: stop,
-        getStatus: getStatus,
-        getURL: getURL
+        getStatus: getStatus
     };
 }

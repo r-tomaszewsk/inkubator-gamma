@@ -7,6 +7,7 @@
 	<name>inkubatorproject</name>
 
     <tizen:privilege name='http://developer.samsung.com/privilege/productinfo'/>
+    <tizen:privilege name='http://tizen.org/privilege/filesystem.read'/>
     
 	<tizen:profile name="tv-samsung"/>
 
