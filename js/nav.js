@@ -169,15 +169,17 @@ window.app.nav = function(tizen) {
                     displayOutputs.sizeOutput.innerText = `${tvDeviceObject.screenSize.name}"`;
                     displayOutputs.seriesOutput.innerText = tvDeviceObject.series.name;
                     object.style.display = "block";
-                    tizen.filesystem.resolve('wgt-package/video/QE75Q6FNA.mp4', function(file)
-                    {
-                       
-                      Player.init(file.toURI());
-                      Player.play();
-              
-                    }); 
                     
-
+                    console.log('Player yay!');
+                    
+                    tizen.filesystem.resolve('wgt-package', function(directory)
+                    {
+                        console.log(directory.toURI() + '/video/QE75Q6FNA.mp4');
+                      tizenPlayer.init(directory.toURI() + '/video/QE75Q6FNA.mp4');
+                      tizenPlayer.play();
+                    }, function (e) {
+                        console.log('Error');
+                    }, 'r');   
                 }
             }
             

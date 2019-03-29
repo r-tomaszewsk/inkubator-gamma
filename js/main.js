@@ -1,11 +1,8 @@
 function Player () {
     //
-
-
     document.addEventListener('visibilitychange', function () {
         // 
     });
-
 
     function init (url) {
 
@@ -43,6 +40,7 @@ function Player () {
         webapis.avplay.open(url);
         webapis.avplay.setListener(listener);
         webapis.avplay.setDisplayRect('680','2','600','350');
+        webapis.avplay.setLooping(true);
      
     }
 
@@ -67,7 +65,6 @@ function Player () {
         init: init,
         play: play,
         stop: stop,
-        getStatus: getStatus,
-        getURL: getURL
+        getStatus: getStatus
     };
 }

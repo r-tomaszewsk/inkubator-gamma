@@ -5,6 +5,8 @@ const modelCode = document.getElementById("myModel");
 const input = document.querySelector("input");
 const object = document.querySelector("object");
 
+const tizenPlayer = new Player();
+
 const displayOutputs = {
     yearOutput: document.getElementById("year"),
     regionOutput: document.getElementById("region"),
